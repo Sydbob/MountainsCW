@@ -13,10 +13,11 @@ Climber::Climber(int climberAge, string climberName, char climberGender)
 
 void Climber::AddMountain()
 {
-	Mountain newMountain("Mountain1", 123);
-	//newMountain.SetName();
-	//newMountain.SetHeight();
+	Mountain newMountain;
+	newMountain.SetName();
+	newMountain.SetHeight();
 	this->mountains.push_back(newMountain);
+	AverageHeight();
 }
 
 float Climber::AverageHeight()
@@ -56,9 +57,9 @@ void Climber::HighestMountain()
 char Climber::AskGender()
 {
 	//ask climber gender
-	char climberGender = 'f';
+	char climberGender;
 	cout << "Enter gender('f' = female, 'm' = male, 'o' = other, 'r' = refuse to answer): ";
-//	cin >> climberGender;
+	cin >> climberGender;
 	//keep asking while gender is not valid
 	while (climberGender != 'f' && climberGender != 'm' && climberGender != 'o' && climberGender != 'r')
 	{
@@ -72,9 +73,9 @@ char Climber::AskGender()
 
 string Climber::AskName()
 {
-	string climberName = "JOrge";
+	string climberName;
 	cout << "Enter your name: ";
-	//cin >> climberName;
+	cin >> climberName;
 	//set name to one user provided
 	this->climberName = climberName;
 	return climberName;
@@ -82,9 +83,9 @@ string Climber::AskName()
 
 int Climber::AskAge()
 {
-	int climberAge = 12;
+	int climberAge;
 	cout << "Enter age (valid range is from 1 to 120): ";
-	//cin >> climberAge;
+	cin >> climberAge;
 	//keep asking while age is not valid
 	while (climberAge < 1 || climberAge >120)
 	{

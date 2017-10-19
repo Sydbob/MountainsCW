@@ -15,13 +15,13 @@ void Club::AddClimber()
 }
 
 
-Climber Club::ClimberWithHighestAverage()
+Climber& Club::ClimberWithHighestAverage()
 {
-	Climber highestAverageClimber;
+	Climber& highestAverageClimber = climbers[0];
 	for (unsigned int i = 0; i < climbers.size(); ++i)
 	{
 		int highestAverageIndex = 0;
-		if (climbers[i].GetAverage() < climbers[highestAverageIndex].GetAverage() )
+		if (climbers[i].GetAverage() > climbers[highestAverageIndex].GetAverage() )
 		{
 			highestAverageIndex = i;
 			highestAverageClimber = climbers[highestAverageIndex];

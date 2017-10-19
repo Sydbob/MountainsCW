@@ -13,10 +13,10 @@ class Club {
 public: 
 	Club();
 
-	vector<Climber> GetClimbers(){ return climbers; }
+	vector<Climber>& GetClimbers(){ return climbers; }
 
 	void AddClimber();
-	Climber ClimberWithHighestAverage();
+	Climber& ClimberWithHighestAverage();
 
 private:
 	vector<Climber> climbers;

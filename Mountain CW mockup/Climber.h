@@ -33,10 +33,9 @@ public:
 	float GetAverage() { return averageHeight; }
 	vector<Mountain>& GetMountains() { return mountains; }
 	string GetName() { return climberName; }
-	vector<Mountain> mountains;
 
 private:
-
+	vector<Mountain> mountains;
 	int climberAge;
 	float averageHeight; 
 	string climberName;
