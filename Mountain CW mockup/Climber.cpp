@@ -50,6 +50,7 @@ Mountain& Climber::HighestMountain()
 			highestMountain = mountains[highestPosIndex];
 		}
 	}
+	highestMountainHeight = highestMountain.GetHeight();
 	return highestMountain;
 }
 

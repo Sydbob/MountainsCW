@@ -30,6 +30,7 @@ public:
 	void DisplayMountains(vector<Mountain> mountains);
 
 	Info GetInfo();
+	int& GetHeighestHeight() { return highestMountainHeight; }
 	float& GetAverage() { return averageHeight; }
 	vector<Mountain>& GetMountains() { return mountains; }
 	string GetName() { return climberName; }
@@ -40,6 +41,7 @@ private:
 	float averageHeight; 
 	string climberName;
 	char climberGender;
+	int highestMountainHeight;
 
 
 };

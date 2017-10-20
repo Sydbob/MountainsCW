@@ -39,7 +39,7 @@ Climber& Club::ClimberWithClubsHighestClimbedMountain()
 	for (unsigned int i = 0; i < climbers.size(); ++i)
 	{
 		int highestClimberIndex = 0;
-		if (climbers[highestClimberIndex].HighestMountain().GetHeight() < climbers[i].HighestMountain().GetHeight())
+		if (climbers[highestClimberIndex].GetHeighestHeight() < climbers[i].GetHeighestHeight())
 		{
 			highestClimberIndex = i;
 			climberWithClubsHighestMountain = climbers[highestClimberIndex];
