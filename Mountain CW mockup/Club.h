@@ -17,6 +17,7 @@ public:
 
 	void AddClimber();
 	Climber& ClimberWithHighestAverage();
+	Climber& ClimberWithClubsHighestClimbedMountain();
 
 private:
 	vector<Climber> climbers;

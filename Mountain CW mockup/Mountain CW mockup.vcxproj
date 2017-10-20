@@ -152,7 +152,7 @@
   <ItemGroup>
     <ClCompile Include="Climber.cpp" />
     <ClCompile Include="Club.cpp" />
-    <ClCompile Include="Mountain CW mockup.cpp" />
+    <ClCompile Include="Main.cpp" />
     <ClCompile Include="Mountain.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

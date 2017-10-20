@@ -17,7 +17,9 @@ void Climber::AddMountain()
 	newMountain.SetName();
 	newMountain.SetHeight();
 	this->mountains.push_back(newMountain);
+	//calculate average and highest mountain each time new object is added
 	AverageHeight();
+	HighestMountain();
 }
 
 float Climber::AverageHeight()
@@ -34,23 +36,21 @@ float Climber::AverageHeight()
 }
 
 
-void Climber::HighestMountain()
+Mountain& Climber::HighestMountain()
 {
+	Mountain& highestMountain = mountains[0];
 	int highestPosIndex = 0;
 	for (unsigned int i = 0; i < mountains.size(); ++i)
 	{
-		//check if height of element in position highestPos is > height of the element in position i
+		//check if height of element in position highestPos is < height of the element in position i
 		if (mountains[highestPosIndex].GetHeight() < mountains[i].GetHeight() )
 		{
-			//if it is higher, then replace highestPos with current one
+			//if it is < then replace highestPos with current one
 			highestPosIndex = i;
+			highestMountain = mountains[highestPosIndex];
 		}
 	}
-	
-
-	//display the highest mountain
-	cout << mountains[highestPosIndex].GetName();
-	cout << " (" << mountains[highestPosIndex].GetHeight() << " m heigh)";
+	return highestMountain;
 }
 
 //This method will ask the user for its gender and then it will assign it to the instance of the object

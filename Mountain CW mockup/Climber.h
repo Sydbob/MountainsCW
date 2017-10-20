@@ -21,7 +21,7 @@ public:
 	string AskName();
 	int AskAge();
 
-	void HighestMountain();
+	Mountain& HighestMountain(); 
 	float AverageHeight();	
 	vector<Mountain> mountainsGreaterThan(int minHeight);
 	void AddMountain();
@@ -30,7 +30,7 @@ public:
 	void DisplayMountains(vector<Mountain> mountains);
 
 	Info GetInfo();
-	float GetAverage() { return averageHeight; }
+	float& GetAverage() { return averageHeight; }
 	vector<Mountain>& GetMountains() { return mountains; }
 	string GetName() { return climberName; }
 

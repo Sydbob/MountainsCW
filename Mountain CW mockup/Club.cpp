@@ -11,7 +11,8 @@ void Club::AddClimber()
 	newClimber.GetInfo();
 	
 	//add new climber to list of climber objects
-	climbers.push_back(newClimber);
+	this->climbers.push_back(newClimber);
+	
 }
 
 
@@ -32,20 +33,18 @@ Climber& Club::ClimberWithHighestAverage()
 	
 } 
 
-/*
-NameAndHeight HighestMountainClimbed()
+Climber& Club::ClimberWithClubsHighestClimbedMountain()
 {
-	//loop through cllimbers
-	//loop through their mountain climbed
-	//get highest mountain climbed by a climber1
-	//add it to highestst current
-	//got through rest of climber get their highest 
-	//and compare to current 
-	//if it's higher-replace
-
+	Climber& climberWithClubsHighestMountain = climbers[0];
+	for (unsigned int i = 0; i < climbers.size(); ++i)
+	{
+		int highestClimberIndex = 0;
+		if (climbers[highestClimberIndex].HighestMountain().GetHeight() < climbers[i].HighestMountain().GetHeight())
+		{
+			highestClimberIndex = i;
+			climberWithClubsHighestMountain = climbers[highestClimberIndex];
+		}
+	}
+	return climberWithClubsHighestMountain;
 }
 
-NameAndHeight AllMountainsHigherThan(int minHeight)
-{
-
-} */
