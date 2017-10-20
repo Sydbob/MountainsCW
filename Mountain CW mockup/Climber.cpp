@@ -38,7 +38,7 @@ float Climber::AverageHeight()
 
 Mountain& Climber::HighestMountain()
 {
-	Mountain& highestMountain = mountains[0];
+	Mountain highestMountain;
 	int highestPosIndex = 0;
 	for (unsigned int i = 0; i < mountains.size(); ++i)
 	{
@@ -51,7 +51,7 @@ Mountain& Climber::HighestMountain()
 		}
 	}
 	highestMountainHeight = highestMountain.GetHeight();
-	return highestMountain;
+	return mountains[highestPosIndex];
 }
 
 //This method will ask the user for its gender and then it will assign it to the instance of the object

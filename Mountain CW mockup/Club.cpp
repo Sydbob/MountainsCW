@@ -18,10 +18,10 @@ void Club::AddClimber()
 
 Climber& Club::ClimberWithHighestAverage()
 {
-	Climber& highestAverageClimber = climbers[0];
+	Climber highestAverageClimber;
+	int highestAverageIndex = 0;
 	for (unsigned int i = 0; i < climbers.size(); ++i)
 	{
-		int highestAverageIndex = 0;
 		if (climbers[i].GetAverage() > climbers[highestAverageIndex].GetAverage() )
 		{
 			highestAverageIndex = i;
@@ -29,22 +29,22 @@ Climber& Club::ClimberWithHighestAverage()
 		}
 	}
 	
-	return highestAverageClimber;
-	
+	return climbers[highestAverageIndex];
 } 
 
 Climber& Club::ClimberWithClubsHighestClimbedMountain()
 {
-	Climber& climberWithClubsHighestMountain = climbers[0];
+	Climber climberWithClubsHighestMountain;
+	int highestClimberIndex = 0;
+
 	for (unsigned int i = 0; i < climbers.size(); ++i)
 	{
-		int highestClimberIndex = 0;
 		if (climbers[highestClimberIndex].GetHeighestHeight() < climbers[i].GetHeighestHeight())
 		{
 			highestClimberIndex = i;
 			climberWithClubsHighestMountain = climbers[highestClimberIndex];
 		}
 	}
-	return climberWithClubsHighestMountain;
+	return climbers[highestClimberIndex];
 }
 
