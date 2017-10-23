@@ -145,6 +145,7 @@
   <ItemGroup>
     <ClInclude Include="Climber.h" />
     <ClInclude Include="Club.h" />
+    <ClInclude Include="ClubStats.h" />
     <ClInclude Include="Mountain.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
@@ -152,6 +153,7 @@
   <ItemGroup>
     <ClCompile Include="Climber.cpp" />
     <ClCompile Include="Club.cpp" />
+    <ClCompile Include="ClubStats.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Mountain.cpp" />
     <ClCompile Include="stdafx.cpp">
