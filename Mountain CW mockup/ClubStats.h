@@ -13,9 +13,11 @@ public:
 	void DisplayStatisticsSubMenu();
 	void DisplayAddClimberMenu();
 	void AskMenuOption();
+	char AskYesNo(string question);
 	int GetUserOptionChoice() { return userOptionChoice; }
 
 private:
 	int userOptionChoice;
+	
 
 };

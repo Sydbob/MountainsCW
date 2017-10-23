@@ -64,9 +64,18 @@ void ClubStats::AskMenuOption()
 
 void ClubStats::DisplayAddClimberMenu()
 {
-	cout << "\nWhat would you like to do?" << endl;
-	cout << "0 --> Go back to main menu" << endl;
-	cout << "1--> Add another climber" << endl;
-	cout << "2--> Add a mountain to current climber" << endl;
-	cout << "3 --> View current climber info" << endl;
+	cout << "\n		### Add climber sub-menu##" << endl;
+	cout << "You're now in the add climber menu. Adding a climber: " << endl;
+	
+}
+
+char ClubStats::AskYesNo(string question)
+{
+	char answer;
+	do {
+		cout << question << "(y/n): ";
+		cin >> answer;
+	} while (answer != 'y' && answer != 'n');
+
+	return answer;
 }
