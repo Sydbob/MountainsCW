@@ -17,9 +17,13 @@ public:
 
 	void AddClimber();
 	Climber& ClimberWithHighestAverage();
+	vector<Mountain> GetAllMountainsHigherThanGiven() { return allMountainsHigherThanGiven; }
 	Climber& ClimberWithClubsHighestClimbedMountain();
+	vector <Mountain>& AllMountainsHigherThanGiven();
 
 private:
 	vector<Climber> climbers;
+	vector<Mountain> allMountainsHigherThanGiven;
+	vector<Mountain> allDocumentedMountains;
 
 };

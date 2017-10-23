@@ -1,5 +1,7 @@
 #include "stdafx.h"
 #include "Club.h"
+#include "Climber.h"
+#include "Mountain.h"
 
 
 Club::Club() {};
@@ -48,3 +50,28 @@ Climber& Club::ClimberWithClubsHighestClimbedMountain()
 	return climbers[highestClimberIndex];
 }
 
+vector <Mountain>& Club::AllMountainsHigherThanGiven()
+{
+	int minHeight;
+	vector<Mountain>& selectedMountains= allMountainsHigherThanGiven;
+	
+	//add all climber mountains to a vector
+	for (unsigned int i = 0; i<climbers.size(); ++i )
+	{
+		for (unsigned int k = 0; k < climbers[i].GetMountains().size(); ++k)
+		{
+			allDocumentedMountains.push_back(climbers[i].GetMountains()[k]);
+		}
+	}
+	cout << "Enter min Height by which to filter mountains: ";
+	cin >> minHeight;
+
+	for (unsigned int i = 0; i < allDocumentedMountains.size(); ++i)
+	{
+		if (allDocumentedMountains[i].GetHeight() > minHeight)
+		{
+			selectedMountains.push_back(allDocumentedMountains[i]);
+		}
+	}
+	return selectedMountains;
+}

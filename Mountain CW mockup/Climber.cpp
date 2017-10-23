@@ -2,6 +2,7 @@
 #include "Climber.h"
 #include "Mountain.h"
 
+
 Climber::Climber() {};
 Climber::Climber(int climberAge, string climberName, char climberGender) 
 {
@@ -20,6 +21,7 @@ void Climber::AddMountain()
 	//calculate average and highest mountain each time new object is added
 	AverageHeight();
 	HighestMountain();
+	
 }
 
 float Climber::AverageHeight()
@@ -131,6 +133,10 @@ void Climber::DisplayMountains(vector<Mountain> mountains)
 //filter and return mountains greater than provided height
 vector<Mountain> Climber::mountainsGreaterThan(int minHeight)
 {
+	cout << "Enter min Height by which to filter mountains: ";
+	cin >> minHeight;
+
+	//filter mountains higher than minHeight
 	vector<Mountain> mountainsSelected;
 	for (unsigned int i = 0; i < mountains.size(); ++i)
 	{
@@ -140,5 +146,4 @@ vector<Mountain> Climber::mountainsGreaterThan(int minHeight)
 		}
 	}
 	return mountainsSelected;
-
 }
