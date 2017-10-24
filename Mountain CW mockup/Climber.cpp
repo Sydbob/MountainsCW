@@ -40,7 +40,6 @@ float Climber::AverageHeight()
 
 Mountain& Climber::HighestMountain()
 {
-	Mountain highestMountain;
 	int highestPosIndex = 0;
 	for (unsigned int i = 0; i < mountains.size(); ++i)
 	{
@@ -49,10 +48,9 @@ Mountain& Climber::HighestMountain()
 		{
 			//if it is < then replace highestPos with current one
 			highestPosIndex = i;
-			highestMountain = mountains[highestPosIndex];
 		}
 	}
-	highestMountainHeight = highestMountain.GetHeight();
+	highestMountainHeight = mountains[highestPosIndex].GetHeight();
 	return mountains[highestPosIndex];
 }
 

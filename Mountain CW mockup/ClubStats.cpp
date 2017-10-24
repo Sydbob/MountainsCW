@@ -31,9 +31,9 @@ ClubStats::ClubStats() {};
 
 void ClubStats::DisplayMenu()
 {
-	cout << "			   ### MAIN MENU ###" << endl;
+	cout << "\n\n			   ### MAIN MENU ###" << endl;
 	cout << "What would you like to do? " << endl;
-	cout << "0 --> Enter main menu [you are currently here]" << endl;
+	cout << "0 --> Exit the Application" << endl;
 	cout << "1 --> Add climber" << endl;
 	cout << "2 --> Add a mountain climbed" << endl;
 	cout << "3 --> Display club statistics [will open a sub-menu with option]" << endl;
@@ -41,7 +41,7 @@ void ClubStats::DisplayMenu()
 
 void ClubStats::DisplayStatisticsSubMenu()
 {
-	cout << "		### Statistics Sub-Menu ###" << endl;
+	cout << "\n	\n	### Statistics Sub-Menu ###" << endl;
 	cout << "You're in statistics sub-menu. Below are options to chose from:" << endl;
 	cout << "0--> Go back to main menu" << endl;
 	cout << "1--> Display climber with recorded highest average climbed" << endl;
