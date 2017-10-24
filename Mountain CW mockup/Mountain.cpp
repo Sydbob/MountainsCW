@@ -32,7 +32,8 @@ void Mountain::SetName()
 {
 	string name; 
 	cout << "Enter mountain name: ";
-	cin >> name;
+	cin.ignore();
+	getline(cin, name);
 	//record mountain name
 	this->name = name;
 	
