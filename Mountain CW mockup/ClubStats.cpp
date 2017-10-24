@@ -34,8 +34,8 @@ void ClubStats::DisplayMenu()
 	cout << "\n\n			   ### MAIN MENU ###" << endl;
 	cout << "What would you like to do? " << endl;
 	cout << "0 --> Exit the Application" << endl;
-	cout << "1 --> Add climber" << endl;
-	cout << "2 --> Add a mountain climbed" << endl;
+	cout << "1 --> Add new climber" << endl;
+	cout << "2 --> Add new mountain to an existing climber" << endl;
 	cout << "3 --> Display club statistics [will open a sub-menu with option]" << endl;
 }
 
