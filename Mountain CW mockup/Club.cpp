@@ -24,7 +24,7 @@ Climber& Club::ClimberWithHighestAverage()
 	int highestAverageIndex = 0;
 	for (unsigned int i = 0; i < climbers.size(); ++i)
 	{
-		if (climbers[i].GetAverage() > climbers[highestAverageIndex].GetAverage() )
+		if (climbers[i].GetAverageHeight() > climbers[highestAverageIndex].GetAverageHeight() )
 		{
 			highestAverageIndex = i;
 			highestAverageClimber = climbers[highestAverageIndex];
@@ -73,5 +73,6 @@ vector <Mountain>& Club::AllMountainsHigherThanGiven()
 			selectedMountains.push_back(allDocumentedMountains[i]);
 		}
 	}
+	allDocumentedMountains.clear();
 	return selectedMountains;
 }

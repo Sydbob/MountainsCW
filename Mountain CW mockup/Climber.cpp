@@ -75,6 +75,7 @@ char Climber::AskGender()
 string Climber::AskName()
 {
 	string climberName;
+	cout << "[note: names CANNOT have spaces in them e.g John Smith should be enetered as John_Smith]: " << endl;
 	cout << "Enter your name: ";
 	cin >> climberName;
 	//set name to one user provided

@@ -41,7 +41,7 @@ void ClubStats::DisplayMenu()
 
 void ClubStats::DisplayStatisticsSubMenu()
 {
-	cout << "\n	\n	### Statistics Sub-Menu ###" << endl;
+	cout << "\n	\n			### Statistics Sub-Menu ###" << endl;
 	cout << "You're in statistics sub-menu. Below are options to chose from:" << endl;
 	cout << "0--> Go back to main menu" << endl;
 	cout << "1--> Display climber with recorded highest average climbed" << endl;

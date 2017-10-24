@@ -31,9 +31,11 @@ public:
 
 	Info GetInfo();
 	int& GetHeighestHeight() { return highestMountainHeight; }
-	float& GetAverage() { return averageHeight; }
+	float& GetAverageHeight() { return averageHeight; }
 	vector<Mountain>& GetMountains() { return mountains; }
 	string GetName() { return climberName; }
+	char GetGender() { return climberGender; }
+	int GetAge() { return climberAge; }
 
 private:
 	vector<Mountain> mountains;
