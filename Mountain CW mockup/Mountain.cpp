@@ -1,8 +1,6 @@
 #include "stdafx.h"
 #include "Mountain.h"
 
-//Constructor
-
 Mountain::Mountain(){}
 
 Mountain::Mountain(string name, int height)
@@ -12,7 +10,6 @@ Mountain::Mountain(string name, int height)
 }
 
 void Mountain::SetHeight()
-
 {
 	int height;
 	cout << "Enter height in m (valid range is 5 to 8848 m): ";
@@ -36,6 +33,5 @@ void Mountain::SetName()
 	getline(cin, name);
 	//record mountain name
 	this->name = name;
-	
 }
 

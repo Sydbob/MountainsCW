@@ -54,9 +54,11 @@ void ClubStats::AskMenuOption()
 	cout << "Choose an option (0/1/2/3): ";
 	int userInput;
 	cin >> userInput;
-	while (userInput != 1 && userInput != 2 && userInput != 3 && userInput != 0)
+	while (cin.fail() && userInput != 1 && userInput != 2 && userInput != 3 && userInput != 0)
 	{
-		cout << "\nThat's not a valid option. Valid options are: 0, 1, 2, 3" << endl;
+		cout << "\nThat's not a valid option. Valid options are: 0, 1, 2, 3. Pick an option:";
+		cin.clear();
+		cin.ignore(256, '\n');
 		cin >> userInput;
 	}
 	userOptionChoice = userInput;

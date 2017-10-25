@@ -18,7 +18,7 @@ void Club::AddClimber()
 	{
 		if (climbers[i].GetName() == newClimber.GetName())
 		{
-			cout << "\nThis name is already taken. Enter a different one";
+			cout << "\nThis name is already taken. Enter a different one" << endl;
 			newClimber.AskName();
 		}
 	}

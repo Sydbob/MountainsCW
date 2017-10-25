@@ -80,7 +80,6 @@ string Climber::AskName()
 	cout << "Enter your name: ";
 	cin.ignore();
 	getline (cin, climberName );
-	//cin >> climberName;
 	//set name to one user provided
 	this->climberName = climberName;
 	return climberName;
