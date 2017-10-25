@@ -6,7 +6,7 @@
 struct Info {
 	string name;
 	int age;
-	char gender;
+	string gender;
 };
 
 
@@ -15,9 +15,9 @@ class Climber
 
 public:
 	Climber();
-	Climber(int climberAge, string climberName, char climberGender);
+	Climber(int climberAge, string climberName, string climberGender);
 
-	char AskGender();
+	string AskGender();
 	string AskName();
 	int AskAge();
 
@@ -34,16 +34,15 @@ public:
 	float& GetAverageHeight() { return averageHeight; }
 	vector<Mountain>& GetMountains() { return mountains; }
 	string GetName() { return climberName; }
-	char GetGender() { return climberGender; }
+	string GetGender() { return climberGender; }
 	int GetAge() { return climberAge; }
+	
 
 private:
 	vector<Mountain> mountains;
 	int climberAge;
 	float averageHeight; 
 	string climberName;
-	char climberGender;
+	string climberGender;
 	int highestMountainHeight;
-
-
 };

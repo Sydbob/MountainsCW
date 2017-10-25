@@ -6,12 +6,22 @@
 
 Club::Club() {};
 
+
+
 void Club::AddClimber()
 {
 	Climber newClimber;
 	//ask user for gender, age and name of new climber
 	newClimber.GetInfo();
-	
+	//check if the name provided is unique
+	for (int i = 0; i < climbers.size(); ++i)
+	{
+		if (climbers[i].GetName() == newClimber.GetName())
+		{
+			cout << "\nThis name is already taken. Enter a different one";
+			newClimber.AskName();
+		}
+	}
 	//add new climber to list of climber objects
 	this->climbers.push_back(newClimber);
 	

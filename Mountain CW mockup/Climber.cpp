@@ -4,7 +4,7 @@
 
 
 Climber::Climber() {};
-Climber::Climber(int climberAge, string climberName, char climberGender) 
+Climber::Climber(int climberAge, string climberName, string climberGender) 
 {
 	this->climberAge = climberAge;
 	this->climberName = climberName;
@@ -55,22 +55,24 @@ Mountain& Climber::HighestMountain()
 }
 
 //This method will ask the user for its gender and then it will assign it to the instance of the object
-char Climber::AskGender()
+string Climber::AskGender()
 {
 	//ask climber gender
-	char climberGender;
-	cout << "Enter gender('f' = female, 'm' = male, 'o' = other, 'r' = refuse to answer): ";
+	string climberGender;
+	cout << "\nEnter gender('f' = female, 'm' = male, 'o' = other, 'r' = refuse to answer): ";
 	cin >> climberGender;
 	//keep asking while gender is not valid
-	while (climberGender != 'f' && climberGender != 'm' && climberGender != 'o' && climberGender != 'r')
+	while (climberGender != "f" && climberGender != "m" && climberGender != "o" && climberGender!= "r")
 	{
-		cout << "Enter gender ('f' = female, 'm' = male, 'o'= other, 'r' = refuse to answer): " << endl;
+		cout << "\nEnter gender ('f' = female, 'm' = male, 'o'= other, 'r' = refuse to answer): ";
 		cin >> climberGender;
 	}
 	//finally set climbers gender to one provided
 	this->climberGender = climberGender;
 	return climberGender;
 }
+
+
 
 string Climber::AskName()
 {
@@ -90,9 +92,11 @@ int Climber::AskAge()
 	cout << "Enter age (valid range is from 1 to 120): ";
 	cin >> climberAge;
 	//keep asking while age is not valid
-	while (climberAge < 1 || climberAge >120)
+	while (cin.fail() || climberAge < 1 || climberAge >120)
 	{
 		cout << "Enter age (valid range is from 1 to 120): ";
+		cin.clear();
+		cin.ignore(256, '\n');
 		cin >> climberAge;
 	}
 	//set climber age to user's provided one
@@ -104,7 +108,7 @@ Info Climber::GetInfo()
 {
 	string name = AskName();
 	int age = AskAge();
-	char gender = AskGender();
+	string gender = AskGender();
 	Info newInfo;
 	newInfo.name = name;
 	newInfo.age = age;
